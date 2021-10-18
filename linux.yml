@@ -1,0 +1,4 @@
+# file: webservers.yml
+- hosts: localhost
+  roles:
+    - ansible-linux-git

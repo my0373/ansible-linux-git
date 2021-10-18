@@ -1,0 +1,22 @@
+---
+# tasks file for ansible-linux-git
+- name: Ensure git is installed
+  dnf: 
+    name: 'git'
+    state: latest
+  become: yes
+  tags: git
+
+- git_config:
+    name: user.name
+    scope: system
+    value: 'Matt York'
+  become: yes
+  tags: git
+
+- git_config:
+    name: user.email
+    scope: system
+    value: 'my0373@gmail.com'
+  become: yes
+  tags: git
